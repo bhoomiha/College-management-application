@@ -1,0 +1,14 @@
+create database collegemanagement;
+
+create table staff(staff_id int primary key auto_increment, staff_name varchar(50), Role_name varchar(20), Department varchar(10), username varchar(50), email varchar(70),
+password varchar(60),
+constraint staff_role foreign key(Role_name) references Role(Role_name));
+
+create table student(student_id int  primary key auto_increment
+, student_name varchar(30), Admission_id int, Department varchar(20), username varchar(20), email varchar(70),
+password varchar(60), passingyear int );
+
+
+create table demo(id int primary key auto_increment , year int);
+
+insert into staff(staff_name,Role_name,Department,username,email,password) values("Aanand", "Admin", "", "Aanand", "Aanand@gmail.com" , "aDmin123");
